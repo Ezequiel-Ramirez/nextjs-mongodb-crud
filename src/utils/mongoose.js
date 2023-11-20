@@ -10,7 +10,7 @@ async function dbConnect() {
         return;
     }
 
-    const db = await connect('mongodb+srv://ezequielram:ezequielram@cluster0.sk4jwql.mongodb.net/', {
+    const db = await connect(process.env.MONGODB_URI, {
     });
 
     console.log(db.connection.db.databaseName)
